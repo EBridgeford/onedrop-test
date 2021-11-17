@@ -142,7 +142,7 @@ public class ForecastService {
     }
 
     @Cacheable("OpenWeatherMap")
-    private Map<String, OpenWeatherMap> getData(List<String> searchTerms, boolean byZipCode) {
+    public Map<String, OpenWeatherMap> getData(List<String> searchTerms, boolean byZipCode) {
         Map<String, OpenWeatherMap> retValue = new HashMap<>();
 
         for (String searchTerm : searchTerms) {
